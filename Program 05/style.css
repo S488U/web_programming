@@ -1,0 +1,35 @@
+.form-contents {
+    width: 400px;
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    border: 2px solid black;
+    padding: 1rem 0;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1rem;
+}
+
+label {
+    text-transform: capitalize;
+}
+
+
+input, select {
+    border: 1px rgb(184, 184, 184) solid;
+    padding: 7px 10px;
+    font-size: 17px;
+}
+
+input[type="submit"] {
+    background-color: green;
+    color: #fff;
+}

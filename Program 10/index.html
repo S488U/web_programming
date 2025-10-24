@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <style>
+        body {
+            height: 70vh;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px auto;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+
+            p {
+                margin: 0;
+                font-weight: bold;
+            }
+
+            label {
+                display: block;
+                margin: 5px;
+            }
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        button {
+            margin: 20px auto;
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Online Exam</h1>
+        <form id="examForm">
+            <div class="question">
+                <p>What does HTML stands for?</p>
+                <label><input type="radio" name="q1" value="correct">Hyper Text Markup Language</label>
+                <label><input type="radio" name="q1" value="wrong">Home Tool Markup Language</label>
+                <label><input type="radio" name="q1" value="wrong">Hyperlinks and Markup Language</label>
+            </div>
+            <div class="question">
+                <p>What does CSS stands for?</p>
+                <label><input type="radio" name="q2" value="correct">Cascading Style Sheets</label>
+                <label><input type="radio" name="q2" value="wrong">Creative Style Sheets</label>
+                <label><input type="radio" name="q2" value="wrong">Computer Style Sheets</label>
+            </div>
+            <button type="button" onclick="submitExam()">Submit</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function submitExam() {
+            const form = document.getElementById("examForm");
+            const result = document.getElementById("result");
+            let score = 0;
+
+            const answers = form.querySelectorAll("input[type='radio']:checked");
+            answers.forEach((answer) => {
+                if (answer.value === "correct") {
+                    score++;
+                }
+            });
+
+            result.textContent = `You scored ${score} out of 2`;
+        }
+    </script>
+</body>
+
+</html>

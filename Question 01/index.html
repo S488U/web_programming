@@ -1,0 +1,45 @@
+<!-- Generate the calender using javascript code by getting the year from the user -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calender</title>
+</head>
+
+<body>
+
+    <form>
+        <div>
+            <label for="year">Enter the year: </label>
+            <input type="number" name="year" id="year">
+        </div>
+        <div>
+            <input type="submit" id="submit">
+        </div>
+        <div id="result">
+
+        </div>
+    </form>
+    <script>
+
+        document.addEventListener('click', e => {
+            e.preventDefault();
+            const year = document.getElementById("year").value;
+            document.getElementById("result").innerText = year
+
+            for (let month = 0; month < 12; month++) {
+                let date = new Date(year, month, 1);
+                while (date.getMonth() === month) {
+                    date.setDate(date.getDate() + 1)
+                }
+            }
+        })
+
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML Tags</title>
+    <style>
+        *::selection {
+            background-color: black;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url("./6681679.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 98vh;
+            font-size: 20px;
+        }
+
+        hr {
+            border-color: rgb(110, 0, 0);
+        }
+
+        div {
+            background-color: rgba(202, 202, 202, 0.9);
+            padding: 3rem;
+            border-radius: 20px;
+            overflow-y: scroll;
+            width: 80%;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- This is a set of HTML tags -->
+        <h1>Heading one</h1>
+        <h2>Heading two</h2>
+        <h3>Heading three</h3>
+        <p>This is a <b>bold</b> text <br>and it have an <i>italic</i> <br>and also a <u>underline</u>. <br> Please not
+            it
+            has also <mark>mark</mark> tag</p>
+
+        <hr>
+
+        <!-- Ordered Lists -->
+        <ol>
+            <li>Banana</li>
+            <li>Apple</li>
+            <li>Mango</li>
+        </ol>
+
+        <!-- Unordered Lists -->
+        <ul>
+            <li>First</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+
+        <!-- Tables -->
+        <hr>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Name</th>
+                <th>Place</th>
+            </tr>
+            <tr>
+                <td>Shahabas</td>
+                <td>kanhangad</td>
+            </tr>
+            <tr>
+                <td>Sahell</td>
+                <td>Kasaragod</td>
+            </tr>
+        </table>
+
+        <hr>
+        <!-- Adding Images -->
+        <h3>Image:</h3>
+        <img src="./6681679.jpg" alt="Wallpaper" width="500">
+
+        <hr>
+        <h3>Anchor Tag:</h3>
+        <a href="https://google.com" target="_blank">Google Website</a>
+
+        <hr>
+        <h3>HTML Form:</h3>
+        <form action="">
+            <div>
+                <span>Name:</span>
+                <input type="text" name="" id="">
+            </div>
+            <div>
+                <span>Email: </span>
+                <input type="email" name="" id="">
+            </div>
+            <div>
+                <span>Password:</span>
+                <input type="password" name="" id="">
+            </div>
+            <div>
+                <span>Gender: </span>
+                <div>
+                    <div>
+                        <span>Female: </span>
+                        <input type="radio" name="gender" value="female">
+                    </div>
+                    <div>
+                        <span>Male: </span>
+                        <input type="radio" name="gender" value="male">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

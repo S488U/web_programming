@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MCA Hover Example</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        #content {
+            display: inline-block;
+            cursor: pointer;
+            height: 300px;
+        }
+
+        img {
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" onmouseover="changeContent()" onmouseleave="reserContent()">
+        <img src="https://placehold.co/300x200" alt="Image">
+        <p id="id">Hover over for me MCA content</p>
+    </div>
+
+    <script>
+        function changeContent() {
+            document.querySelector("img").src = "./mca.png";
+            document.querySelector("p").textContent = "Masters of Computer Application";
+        }
+
+        function reserContent() {
+            document.querySelector("img").src = "https://placehold.co/300x200";
+            document.querySelector("p").textContent = "Hover over for me MCA content";
+        }
+    </script>
+</body>
+</html>
