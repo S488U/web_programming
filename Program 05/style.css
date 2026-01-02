@@ -18,18 +18,13 @@ form div {
     padding: .5rem 1rem;
 }
 
-label {
-    text-transform: capitalize;
-}
-
-
 input, select {
-    border: 1px rgb(184, 184, 184) solid;
+    border: 1px black solid;
     padding: 7px 10px;
     font-size: 17px;
 }
 
 input[type="submit"] {
     background-color: green;
-    color: #fff;
+    color: white;
 }
